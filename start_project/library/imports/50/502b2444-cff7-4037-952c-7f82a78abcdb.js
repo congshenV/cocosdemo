@@ -21,6 +21,11 @@ cc.Class({
         player: {
             'default': null,
             type: cc.Node
+        },
+        // score label 的引用
+        scoreDisplay: {
+            'default': null,
+            type: cc.Label
         }
     },
 
@@ -30,6 +35,8 @@ cc.Class({
         this.groundY = this.ground.y + this.ground.height / 2;
         // 生成一个新的星星
         this.spawnNewStar();
+        // 初始化计分
+        this.score = 0;
     },
     spawnNewStar: function spawnNewStar() {
         // 使用给定的模板在场景中生成一个新节点
@@ -52,10 +59,13 @@ cc.Class({
         randX = cc.randomMinus1To1() * maxX;
         // 返回星星坐标
         return cc.p(randX, randY);
-    }
+    },
 
     // called every frame, uncomment this function to activate update callback
-    // update: function (dt) {
-
-    // },
+    update: function update(dt) {},
+    gainScore: function gainScore() {
+        this.score += 1;
+        // 更新 scoreDisplay Label 的文字
+        this.scoreDisplay.string = 'Score: ' + this.score.toString();
+    }
 });
