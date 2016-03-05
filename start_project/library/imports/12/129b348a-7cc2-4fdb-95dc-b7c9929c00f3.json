@@ -1,0 +1,23 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "PurpleMonsterm",
+    "texture": "b7728ede-6f36-48b0-bd04-2aacba2b8ba6",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      78,
+      63
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      78,
+      63
+    ],
+    "rotated": 0
+  }
+}
